@@ -19,7 +19,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["@testing-library/jest-dom"]
+    "types": ["@testing-library/jest-dom"],
+    "baseUrl": "src",
+    "paths": {
+      "@pages": ["ui/pages/index.ts"],
+      "@providers": ["providers/index.ts"],
+      "@organisms": ["ui/organisms/index.ts"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["styled", "css", "sty"]
+      }
+    ]
   },
   "include": ["src"]
 }

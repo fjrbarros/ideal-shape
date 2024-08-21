@@ -1,7 +1,7 @@
-import * as Styles from "./App.styles";
+import { Home } from "@pages";
 
 function App() {
-  return <Styles.Container>test config</Styles.Container>;
+  return <Home />;
 }
 
 export default App;
