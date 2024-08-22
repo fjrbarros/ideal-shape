@@ -14,6 +14,8 @@ module.exports = {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
     "@components": "<rootDir>/src/components",
     "@pages": "<rootDir>/src/pages",
+    "@utils": "<rootDir>/src/utils",
+    "@providers": "<rootDir>/src/providers",
   },
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",

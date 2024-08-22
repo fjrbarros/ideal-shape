@@ -5,24 +5,25 @@ interface IHeaderStyleProps {
 }
 
 export const Header = styled.header`
-  padding: 30px 80px;
   backdrop-filter: blur(2px);
   border-bottom: 1px solid #2f2f2f;
   color: #ffffff;
-  display: flex;
-  align-items: center;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  transition: padding 0.2s;
-  & > .menu-button {
+  & > .app-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  & > .app-container .menu-button {
+    margin-left: auto;
     display: none;
   }
   @media (max-width: 768px) {
-    padding: 20px 40px;
     justify-content: space-between;
-    & > .menu-button {
+    & > .app-container .menu-button {
       display: flex;
     }
   }

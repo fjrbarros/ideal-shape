@@ -24,7 +24,8 @@
     "paths": {
       "@pages": ["pages/index.ts"],
       "@providers": ["providers/index.ts"],
-      "@components": ["components/index.ts"]
+      "@components": ["components/index.ts"],
+      "@utils": ["utils/index.ts"]
     },
     "plugins": [
       {
