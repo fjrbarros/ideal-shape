@@ -22,9 +22,9 @@
     "types": ["@testing-library/jest-dom"],
     "baseUrl": "src",
     "paths": {
-      "@pages": ["ui/pages/index.ts"],
+      "@pages": ["pages/index.ts"],
       "@providers": ["providers/index.ts"],
-      "@organisms": ["ui/organisms/index.ts"]
+      "@components": ["components/index.ts"]
     },
     "plugins": [
       {

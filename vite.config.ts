@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@pages": "/src/ui/pages",
+      "@pages": "/src/pages",
       "@providers": "/src/providers",
-      "@organisms": "/src/ui/organisms",
+      "@components": "/src/components",
     },
   },
 });
