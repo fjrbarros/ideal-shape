@@ -1,6 +1,7 @@
-import { render, fireEvent, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { Header } from "./Header";
 import { useState } from "react";
+import { customRender } from "@utils";
 
 jest.mock("react", () => ({
   ...jest.requireActual("react"),
@@ -18,7 +19,7 @@ describe("Header", () => {
   });
 
   it("renders Header component correctly", () => {
-    render(<Header />);
+    customRender(<Header />);
 
     expect(screen.getByText(/ideal/i)).toBeInTheDocument();
     expect(screen.getByText(/shape/i)).toBeInTheDocument();
@@ -33,7 +34,7 @@ describe("Header", () => {
   });
 
   it("toggles menu state when MenuButton is clicked", () => {
-    const { container } = render(<Header />);
+    const { container } = customRender(<Header />);
     const menuButton = container.querySelector(
       ".menu-button"
     ) as HTMLLabelElement;
@@ -46,7 +47,7 @@ describe("Header", () => {
   it("resets menu state on window resize", () => {
     (useState as jest.Mock).mockImplementation(() => [true, setStateMock]);
 
-    render(<Header />);
+    customRender(<Header />);
 
     global.innerWidth = 1024;
     global.dispatchEvent(new Event("resize"));
@@ -57,7 +58,7 @@ describe("Header", () => {
   it("does not reset menu state on window resize if isMenuActive is false", () => {
     (useState as jest.Mock).mockImplementation(() => [false, setStateMock]);
 
-    render(<Header />);
+    customRender(<Header />);
 
     global.innerWidth = 1024;
     global.dispatchEvent(new Event("resize"));
