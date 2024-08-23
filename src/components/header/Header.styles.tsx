@@ -46,7 +46,7 @@ export const Nav = styled.nav<IHeaderStyleProps>`
     position: fixed;
     top: 0;
     left: ${({ $isMenuActive }) => ($isMenuActive ? "0" : "100%")};
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     padding: 100px 50px;
     gap: 2rem;
