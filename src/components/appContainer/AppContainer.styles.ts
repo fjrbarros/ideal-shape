@@ -8,5 +8,9 @@ export const Container = styled.div`
         @media (max-width: ${theme.breakpoints.tablet}px) {
           padding: 20px 40px;
         }
+
+        @media (max-width: ${theme.breakpoints.mobileLarge}px) {
+          padding: 20px;
+        }
     `}
 `;

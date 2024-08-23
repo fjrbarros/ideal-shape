@@ -5,6 +5,7 @@ import { GlobalStyles } from "./GlobalStyle";
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const breakpoints = {
     mobile: 320,
+    mobileLarge: 480,
     tablet: 768,
     desktop: 1024,
   };

@@ -5,6 +5,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     breakpoints: {
       mobile: number;
+      mobileLarge: number;
       tablet: number;
       desktop: number;
     };
