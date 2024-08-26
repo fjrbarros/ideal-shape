@@ -139,6 +139,7 @@ ul {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
