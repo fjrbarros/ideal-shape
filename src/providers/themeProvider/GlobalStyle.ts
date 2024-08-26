@@ -146,4 +146,14 @@ body {
   list-style-type: none;
   font-family: 'Roboto', sans-serif;
 }
+
+::-moz-selection { 
+  color: #ffffff;
+  background: #ff4b00;;
+}
+
+::selection {
+  color: #ffffff;
+  background: #ff4b00;;
+}
 `;
