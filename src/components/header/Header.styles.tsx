@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface IHeaderStyleProps {
   $isMenuActive: boolean;
@@ -21,12 +21,16 @@ export const Header = styled.header`
     margin-left: auto;
     display: none;
   }
-  @media (max-width: 768px) {
-    justify-content: space-between;
-    & > .app-container .menu-button {
-      display: flex;
-    }
-  }
+
+  ${({ theme }) =>
+    css`
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        justify-content: space-between;
+        & > .app-container .menu-button {
+          display: flex;
+        }
+      }
+    `}
 `;
 
 export const Logo = styled.div`
@@ -42,23 +46,27 @@ export const Nav = styled.nav<IHeaderStyleProps>`
   display: flex;
   align-items: center;
   gap: 1rem;
-  @media (max-width: 768px) {
-    position: fixed;
-    top: 0;
-    left: ${({ $isMenuActive }) => ($isMenuActive ? "0" : "100%")};
-    height: 100dvh;
-    width: 100%;
-    padding: 100px 50px;
-    gap: 2rem;
-    background-color: #101010;
-    flex-direction: column;
-    transition: 0.3s ease-out;
-  }
+  ${({ theme }) =>
+    css<IHeaderStyleProps>`
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        position: fixed;
+        top: 0;
+        left: ${({ $isMenuActive }) => ($isMenuActive ? "0" : "100%")};
+        height: 100dvh;
+        width: 100%;
+        padding: 100px 50px;
+        gap: 2rem;
+        background-color: #101010;
+        flex-direction: column;
+        transition: 0.3s ease-out;
+      }
+    `}
 `;
 
 export const NavLink = styled.a`
   color: #ffffff;
   text-decoration: none;
+  white-space: nowrap;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s, transform 0.1s;
@@ -66,10 +74,14 @@ export const NavLink = styled.a`
     color: #ff4b00;
     transform: scale(1.1);
   }
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-  @media (max-width: 300px) {
-    font-size: 1rem;
-  }
+  ${({ theme }) =>
+    css`
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: ${theme.breakpoints.mobile}px) {
+        font-size: 1rem;
+      }
+    `}
 `;
