@@ -1,17 +1,24 @@
 import styled, { css } from "styled-components";
 
 interface IHeaderStyleProps {
-  $isMenuActive: boolean;
+  $isMenuActive?: boolean;
+  $hasScrollMoved?: boolean;
 }
 
-export const Header = styled.header`
-  backdrop-filter: blur(2px);
-  border-bottom: 1px solid #2f2f2f;
+export const Header = styled.header<IHeaderStyleProps>`
+  backdrop-filter: ${({ $hasScrollMoved }) =>
+    $hasScrollMoved ? "blur(8px)" : "blur(2px)"};
+  border-bottom: ${({ $hasScrollMoved }) =>
+    $hasScrollMoved ? "none" : "1px solid #2f2f2f"};
   color: #ffffff;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  transition: box-shadow 0.3s, backdrop-filter 0.3s;
+  box-shadow: ${({ $hasScrollMoved }) =>
+    $hasScrollMoved ? "0 0px 9px #ff380096;" : "none"};
+
   & > .app-container {
     display: flex;
     align-items: center;

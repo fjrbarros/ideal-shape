@@ -1,8 +1,10 @@
 import { AppContainer, MenuButton } from "@components";
 import * as Styles from "./Header.styles";
 import { useEffect, useState } from "react";
+import { useScrollPosition } from "@utils";
 
 export const Header = () => {
+  const { hasScrollMoved } = useScrollPosition();
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ export const Header = () => {
   }, [isMenuActive]);
 
   return (
-    <Styles.Header>
+    <Styles.Header $hasScrollMoved={hasScrollMoved}>
       <AppContainer className="app-container">
         <Styles.Logo>
           IDEAL<span>SHAPE</span>
