@@ -15,6 +15,7 @@ export const Header = styled.header<IHeaderStyleProps>`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   transition: box-shadow 0.3s, backdrop-filter 0.3s;
   box-shadow: ${({ $hasScrollMoved }) =>
     $hasScrollMoved ? "0 0px 9px #ff380096;" : "none"};
@@ -40,9 +41,11 @@ export const Header = styled.header<IHeaderStyleProps>`
     `}
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   font-size: 1.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
   span {
     color: #ff4b00;
   }
@@ -72,7 +75,6 @@ export const Nav = styled.nav<IHeaderStyleProps>`
 
 export const NavLink = styled.a`
   color: #ffffff;
-  text-decoration: none;
   white-space: nowrap;
   font-size: 1rem;
   font-weight: 500;

@@ -8,6 +8,7 @@ declare module "styled-components" {
       mobileLarge: number;
       tablet: number;
       desktop: number;
+      largeDesktop: number;
     };
   }
 }

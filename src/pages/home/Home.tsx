@@ -1,11 +1,13 @@
-import { Header } from "@components";
-import { HomeSection } from "./sub-components";
+import { Header, ScrollToTopButton } from "@components";
+import { HomeSection, OurSpaceSection } from "./sub-components";
 
 export const HomePage = () => {
   return (
     <>
       <Header />
       <HomeSection />
+      <OurSpaceSection />
+      <ScrollToTopButton />
     </>
   );
 };

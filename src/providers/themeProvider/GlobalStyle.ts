@@ -142,6 +142,10 @@ ul {
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1;
   list-style-type: none;
@@ -157,4 +161,22 @@ body {
   color: #ffffff;
   background: #ff4b00;;
 }
+
+::-webkit-scrollbar {
+  width: 10px;;
+}
+
+::-webkit-scrollbar-track {
+  background: #d6d6d6;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 `;

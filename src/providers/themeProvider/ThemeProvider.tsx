@@ -8,6 +8,7 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     mobileLarge: 480,
     tablet: 768,
     desktop: 1024,
+    largeDesktop: 1200,
   };
 
   return (

@@ -25,7 +25,8 @@
       "@pages": ["pages/index.ts"],
       "@providers": ["providers/index.ts"],
       "@components": ["components/index.ts"],
-      "@utils": ["utils/index.ts"]
+      "@utils": ["utils/index.ts"],
+      "@constants": ["constants/index.ts"]
     },
     "plugins": [
       {

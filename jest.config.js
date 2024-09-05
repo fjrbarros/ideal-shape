@@ -16,6 +16,7 @@ module.exports = {
     "@pages": "<rootDir>/src/pages",
     "@utils": "<rootDir>/src/utils",
     "@providers": "<rootDir>/src/providers",
+    "@constants": "<rootDir>/src/constants",
   },
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",

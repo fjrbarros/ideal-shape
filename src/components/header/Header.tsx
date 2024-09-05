@@ -1,11 +1,30 @@
 import { AppContainer, MenuButton } from "@components";
 import * as Styles from "./Header.styles";
-import { useEffect, useState } from "react";
+import { type MouseEvent, useEffect, useState } from "react";
 import { useScrollPosition } from "@utils";
+import { HOME_ID, HOME_SECTION, menuItems } from "@constants";
 
 export const Header = () => {
   const { hasScrollMoved } = useScrollPosition();
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [ideal, shape] = HOME_SECTION.split(" ");
+
+  const handleMenuClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    event.preventDefault();
+    const element = document.getElementById(targetId);
+    const moveScroll = () => element?.scrollIntoView({ behavior: "smooth" });
+
+    if (!isMenuActive) {
+      moveScroll();
+      return;
+    }
+
+    setIsMenuActive(false);
+    setTimeout(moveScroll, 200);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,15 +42,20 @@ export const Header = () => {
 
   return (
     <Styles.Header $hasScrollMoved={hasScrollMoved}>
-      <AppContainer className="app-container">
-        <Styles.Logo>
-          IDEAL<span>SHAPE</span>
+      <AppContainer isHeader className="app-container">
+        <Styles.Logo href={`#${HOME_ID}`}>
+          {ideal} <span>{shape}</span>
         </Styles.Logo>
         <Styles.Nav $isMenuActive={isMenuActive}>
-          <Styles.NavLink href="#service">Nossos serviços</Styles.NavLink>
-          <Styles.NavLink href="#membership">Planos</Styles.NavLink>
-          <Styles.NavLink href="#trainers">Instrutores</Styles.NavLink>
-          <Styles.NavLink href="#contact">Contato</Styles.NavLink>
+          {menuItems.map(({ title, id }) => (
+            <Styles.NavLink
+              key={id}
+              href={`#${id}`}
+              onClick={(e) => handleMenuClick(e, id)}
+            >
+              {title}
+            </Styles.NavLink>
+          ))}
         </Styles.Nav>
         <MenuButton
           className="menu-button"

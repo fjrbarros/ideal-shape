@@ -7,6 +7,7 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  transition: all 0.3s;
   @media (min-width: 1600px) {
     background-position: 50% 0;
   }

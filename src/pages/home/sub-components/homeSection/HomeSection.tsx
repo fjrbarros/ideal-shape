@@ -1,9 +1,10 @@
+import { HOME_ID } from "@constants";
 import * as Styles from "./HomeSection.styles";
 
 export const HomeSection = () => {
   return (
     <Styles.HomeContainer>
-      <Styles.AppContainer>
+      <Styles.AppContainer id={HOME_ID}>
         <Styles.Wrapper>
           <Styles.Title1>PRONTO PARA TREINAR</Styles.Title1>
           <Styles.Title2>SEU CORPO</Styles.Title2>
