@@ -1,5 +1,7 @@
 import { useScrollPosition } from "@utils";
 import * as Styles from "./ScrollToTopButton.styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export const ScrollToTopButton = () => {
   const { hasScrollMoved } = useScrollPosition();
@@ -12,7 +14,7 @@ export const ScrollToTopButton = () => {
 
   return (
     <Styles.ScrollToTopButton onClick={handleScrollToTop}>
-      <Styles.Icon>^</Styles.Icon>
+      <FontAwesomeIcon icon={faArrowUp} />
     </Styles.ScrollToTopButton>
   );
 };

@@ -15,7 +15,13 @@ export const Header = () => {
   ) => {
     event.preventDefault();
     const element = document.getElementById(targetId);
-    const moveScroll = () => element?.scrollIntoView({ behavior: "smooth" });
+    const moveScroll = () => {
+      const block = window.innerWidth < 768 ? "start" : "center";
+      element?.scrollIntoView({
+        behavior: "smooth",
+        block,
+      });
+    };
 
     if (!isMenuActive) {
       moveScroll();
@@ -42,7 +48,7 @@ export const Header = () => {
 
   return (
     <Styles.Header $hasScrollMoved={hasScrollMoved}>
-      <AppContainer isHeader className="app-container">
+      <AppContainer className="app-container">
         <Styles.Logo href={`#${HOME_ID}`}>
           {ideal} <span>{shape}</span>
         </Styles.Logo>

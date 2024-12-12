@@ -1,5 +1,10 @@
 import { Header, ScrollToTopButton } from "@components";
-import { HomeSection, OurSpaceSection } from "./sub-components";
+import {
+  HomeSection,
+  OurSpaceSection,
+  OurTrainersSection,
+} from "./sub-components";
+import { OurMembershipSection } from "./sub-components/ourMembershipSection/OurMembershipSection";
 
 export const HomePage = () => {
   return (
@@ -7,6 +12,8 @@ export const HomePage = () => {
       <Header />
       <HomeSection />
       <OurSpaceSection />
+      <OurMembershipSection />
+      <OurTrainersSection />
       <ScrollToTopButton />
     </>
   );

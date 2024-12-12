@@ -2,12 +2,13 @@ import * as Styles from "./OurSpaceSection.styles";
 import IdeadSpace1 from "../../../../assets/ideal-space-1.jpg";
 import IdeadSpace2 from "../../../../assets/ideal-space-2.jpg";
 import IdeadSpace3 from "../../../../assets/ideal-space-3.jpg";
-import { OUR_SPACE_ID, ourSpaceItems } from "@constants";
+import { OUR_SPACE_ID, OUR_SPACE_SECTION, ourSpaceItems } from "@constants";
+import { AppContainer, CheckList } from "@components";
 
 export const OurSpaceSection = () => {
   return (
-    <Styles.AppContainer id={OUR_SPACE_ID}>
-      <Styles.Title>Nosso espaço</Styles.Title>
+    <AppContainer id={OUR_SPACE_ID} backgroundColor="#1e1e1e">
+      <Styles.Title>{OUR_SPACE_SECTION}</Styles.Title>
       <Styles.ContainerFlex>
         <Styles.ImageContainer>
           <Styles.Image src={IdeadSpace3} alt="space1" />
@@ -16,12 +17,12 @@ export const OurSpaceSection = () => {
         </Styles.ImageContainer>
         <Styles.ListContainer>
           <Styles.List>
-            {ourSpaceItems.map((item) => (
-              <Styles.ChecklistItem key={item}>{item}</Styles.ChecklistItem>
+            {ourSpaceItems.map((text) => (
+              <CheckList key={text} text={text} />
             ))}
           </Styles.List>
         </Styles.ListContainer>
       </Styles.ContainerFlex>
-    </Styles.AppContainer>
+    </AppContainer>
   );
 };

@@ -4,15 +4,17 @@ import * as Styles from "./AppContainer.styles";
 interface IAppContainerProps
   extends PropsWithChildren,
     React.HTMLAttributes<HTMLDivElement> {
-  isHeader?: boolean;
+  backgroundColor?: string;
+  color?: string;
 }
 
 export const AppContainer = ({
   children,
-  isHeader,
+  backgroundColor,
+  color = "#ffffff",
   ...rest
 }: IAppContainerProps) => (
-  <Styles.Container $isHeader={isHeader} {...rest}>
+  <Styles.Container style={{ backgroundColor, color }} {...rest}>
     {children}
   </Styles.Container>
 );

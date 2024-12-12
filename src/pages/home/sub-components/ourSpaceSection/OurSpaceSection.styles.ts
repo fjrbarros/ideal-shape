@@ -1,17 +1,9 @@
 import styled, { css } from "styled-components";
-import { AppContainer as AppContainerCP } from "@components";
-import checkGreen from "../../../../assets/check.png";
-
-export const AppContainer = styled(AppContainerCP)`
-    background-color: #1e1e1e;
-    color: #ffffff;
-`;
 
 export const Title = styled.h3`
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #ffffff;
     margin-bottom: 3rem;
 `;
 
@@ -32,25 +24,6 @@ export const ListContainer = styled.div`
 `;
 
 export const List = styled.ul``;
-
-export const ChecklistItem = styled.li`
-  margin-bottom: 1rem;
-  position: relative;
-  padding-left: 30px;
-
-  &::before {
-    content: '';
-    background-image:  url(${checkGreen});
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-`;
 
 export const ImageContainer = styled.div`
     position: relative;

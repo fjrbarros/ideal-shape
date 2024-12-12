@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
 import { AppContainer as AppContainerCP } from "@components";
 
-export const HomeContainer = styled.div`
-  min-height: 100dvh;
+export const AppContainer = styled(AppContainerCP)`
+  height: 100dvh;
+  display: flex;
+  align-items: center;
   background: url(https://static.vecteezy.com/system/resources/previews/022/460/823/large_2x/muscular-bodybuilder-female-athlete-demonstrates-her-body-in-the-gym-generative-ai-free-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,13 +13,6 @@ export const HomeContainer = styled.div`
   @media (min-width: 1600px) {
     background-position: 50% 0;
   }
-`;
-
-export const AppContainer = styled(AppContainerCP)`
-  height: 100dvh;
-  display: flex;
-  align-items: center;
-  color: white;
 `;
 
 export const Wrapper = styled.div`

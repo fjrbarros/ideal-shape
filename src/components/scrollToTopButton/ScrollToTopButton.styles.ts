@@ -4,8 +4,8 @@ export const ScrollToTopButton = styled.button`
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 8px 18px;
-    font-size: 16px;
+    padding: 16px 18px 15px;
+    font-size: 1rem;
     background-color: #2d2d2d;
     color: #ff4b00;
     border: none;
@@ -16,10 +16,4 @@ export const ScrollToTopButton = styled.button`
     &:hover {
         box-shadow: 0 0px 9px #ff380096;
     }
-`;
-
-export const Icon = styled.span`
-    display: inline-block;
-    font-size: 1.5rem;
-    margin: 5px 0 -5px 0;
 `;
