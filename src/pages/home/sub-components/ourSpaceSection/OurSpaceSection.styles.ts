@@ -1,10 +1,17 @@
 import styled, { css } from "styled-components";
 
-export const Title = styled.h3`
+export const Title = styled.h2`
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 3rem;
+`;
+
+export const Subtitle = styled.h3`
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.2rem;
+
 `;
 
 export const ContainerFlex = styled.div`

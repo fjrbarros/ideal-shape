@@ -2,6 +2,8 @@ export const HOME_TITLE = "Ideal Shape";
 export const HOME_ID = "home";
 
 export const OUR_SPACE_TITLE = "Nosso espaço";
+export const OUR_SPACE_SUBTITLE =
+  "O lugar perfeito para alcançar seus objetivos";
 export const OUR_SPACE_ID = "space";
 export const ourSpaceItems = [
   "Treinadores qualificados para orientação personalizada",

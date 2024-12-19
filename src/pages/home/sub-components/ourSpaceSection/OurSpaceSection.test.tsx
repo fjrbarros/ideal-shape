@@ -1,13 +1,13 @@
 import { screen } from "@testing-library/react";
 import { OurSpaceSection } from "./OurSpaceSection";
-import { OUR_SPACE_TITLE, ourSpaceItems } from "@constants";
+import { OUR_SPACE_SUBTITLE, OUR_SPACE_TITLE, ourSpaceItems } from "@constants";
 import { customRender } from "@utils";
 
 describe("OurSpaceSection", () => {
-  it("renders the title correctly", () => {
+  it("renders the title and subtitle correctly", () => {
     customRender(<OurSpaceSection />);
-    const title = screen.getByText(OUR_SPACE_TITLE);
-    expect(title).toBeInTheDocument();
+    expect(screen.getByText(OUR_SPACE_TITLE)).toBeInTheDocument();
+    expect(screen.getByText(OUR_SPACE_SUBTITLE)).toBeInTheDocument();
   });
 
   it("renders all images with correct alt text", () => {
