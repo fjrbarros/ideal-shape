@@ -10,7 +10,7 @@ module.exports = {
   testEnvironment: "jest-environment-jsdom",
   setupFilesAfterEnv: ["<rootDir>/.jest/jest.setup.js"],
   moduleNameMapper: {
-    "\\.(gif|ttf|eot|svg|png|webp)$": "<rootDir>/.jest/fileMock.js",
+    "\\.(gif|ttf|eot|svg|png|jpg|webp)$": "<rootDir>/.jest/fileMock.js",
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
     "@components": "<rootDir>/src/components",
     "@pages": "<rootDir>/src/pages",
