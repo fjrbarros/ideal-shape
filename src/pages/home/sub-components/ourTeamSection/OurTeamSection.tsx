@@ -1,5 +1,5 @@
 import { AppContainer, Carousel } from "@components";
-import { trainers, TEAM_ID, TEAM_TITLE } from "@constants";
+import { trainers, TEAM_ID, TEAM_TITLE, TEAM_SUBTITLE } from "@constants";
 import * as Styles from "./OurTeamSection.styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -84,6 +84,7 @@ export const OurTeamSection = () => {
   return (
     <AppContainer id={TEAM_ID} backgroundColor="#1e1e1e">
       <Styles.Title>{TEAM_TITLE}</Styles.Title>
+      <Styles.Subtitle>{TEAM_SUBTITLE}</Styles.Subtitle>
       <Carousel items={items} />
     </AppContainer>
   );

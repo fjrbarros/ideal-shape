@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { OurTeamSection } from "./OurTeamSection";
 import { customRender } from "@utils";
-import { TEAM_TITLE, trainers } from "@constants";
+import { TEAM_SUBTITLE, TEAM_TITLE, trainers } from "@constants";
 
 jest.mock("@constants", () => {
   const originalModule = jest.requireActual("@constants");
@@ -13,10 +13,10 @@ jest.mock("@constants", () => {
 });
 
 describe("OurTrainersSection", () => {
-  it("should render the section title", () => {
+  it("should render the section title and subtitle", () => {
     customRender(<OurTeamSection />);
-    const titleElement = screen.getByText(TEAM_TITLE);
-    expect(titleElement).toBeInTheDocument();
+    expect(screen.getByText(TEAM_TITLE)).toBeInTheDocument();
+    expect(screen.getByText(TEAM_SUBTITLE)).toBeInTheDocument();
   });
 
   it("should render trainer cards", () => {
