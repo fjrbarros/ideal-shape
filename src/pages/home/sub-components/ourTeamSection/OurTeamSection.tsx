@@ -1,12 +1,17 @@
-import { AppContainer, Carousel } from '@components';
-import { trainers, TEAM_ID, TEAM_TITLE } from '@constants';
-import * as Styles from './OurTrainersSection.styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { useMemo } from 'react';
+import { AppContainer, Carousel } from "@components";
+import { trainers, TEAM_ID, TEAM_TITLE } from "@constants";
+import * as Styles from "./OurTeamSection.styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faLinkedin,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import { useMemo } from "react";
 
 interface ISocialLink {
-  type: 'facebook' | 'twitter' | 'instagram' | 'linkedin';
+  type: "facebook" | "twitter" | "instagram" | "linkedin";
   iconUrl: string;
 }
 
@@ -19,13 +24,13 @@ interface ITranerCardProps {
 
 const getSocialIcon = (type: string) => {
   switch (type) {
-    case 'facebook':
+    case "facebook":
       return faFacebook;
-    case 'twitter':
+    case "twitter":
       return faTwitter;
-    case 'instagram':
+    case "instagram":
       return faInstagram;
-    case 'linkedin':
+    case "linkedin":
       return faLinkedin;
     default:
       return faFacebook;
@@ -48,7 +53,10 @@ const Card = ({ name, job, imageUrl, socialLinks }: ITranerCardProps) => (
           {socialLinks.map(({ type, iconUrl }) => (
             <Styles.CardIcon key={type}>
               <Styles.CardIconLink href={iconUrl} target="_blank">
-                <FontAwesomeIcon data-testid={type} icon={getSocialIcon(type)} />
+                <FontAwesomeIcon
+                  data-testid={type}
+                  icon={getSocialIcon(type)}
+                />
               </Styles.CardIconLink>
             </Styles.CardIcon>
           ))}
@@ -58,7 +66,7 @@ const Card = ({ name, job, imageUrl, socialLinks }: ITranerCardProps) => (
   </Styles.CardWrapper>
 );
 
-export const OurTrainersSection = () => {
+export const OurTeamSection = () => {
   const items = useMemo(
     () =>
       trainers.map((trainer) => (
@@ -70,7 +78,7 @@ export const OurTrainersSection = () => {
           socialLinks={trainer.socialLinks as ISocialLink[]}
         />
       )),
-    [],
+    []
   );
 
   return (
