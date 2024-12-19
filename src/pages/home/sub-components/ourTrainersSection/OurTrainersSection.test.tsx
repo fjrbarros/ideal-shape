@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { OurTrainersSection } from "./OurTrainersSection";
 import { customRender } from "@utils";
-import { TEAM_SECTION, trainers } from "@constants";
+import { TEAM_TITLE, trainers } from "@constants";
 
 jest.mock("@constants", () => {
   const originalModule = jest.requireActual("@constants");
@@ -15,7 +15,7 @@ jest.mock("@constants", () => {
 describe("OurTrainersSection", () => {
   it("should render the section title", () => {
     customRender(<OurTrainersSection />);
-    const titleElement = screen.getByText(TEAM_SECTION);
+    const titleElement = screen.getByText(TEAM_TITLE);
     expect(titleElement).toBeInTheDocument();
   });
 

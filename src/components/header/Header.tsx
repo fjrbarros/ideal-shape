@@ -2,12 +2,12 @@ import { AppContainer, MenuButton } from "@components";
 import * as Styles from "./Header.styles";
 import { type MouseEvent, useEffect, useState } from "react";
 import { useScrollPosition } from "@utils";
-import { HOME_ID, HOME_SECTION, menuItems } from "@constants";
+import { HOME_ID, HOME_TITLE, menuItems } from "@constants";
 
 export const Header = () => {
   const { hasScrollMoved } = useScrollPosition();
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [ideal, shape] = HOME_SECTION.split(" ");
+  const [ideal, shape] = HOME_TITLE.split(" ");
 
   const handleMenuClick = (
     event: MouseEvent<HTMLAnchorElement>,

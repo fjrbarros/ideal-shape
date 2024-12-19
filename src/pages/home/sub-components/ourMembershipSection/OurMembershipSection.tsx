@@ -1,7 +1,7 @@
 import {
   MEMBERSHIP_CARDS,
   MEMBERSHIP_ID,
-  MEMBERSHIP_SECTION,
+  MEMBERSHIP_TITLE,
   MEMBERSHIP_SECTION_SUBTITLE_1,
   MEMBERSHIP_SECTION_SUBTITLE_2,
 } from "@constants";
@@ -11,7 +11,7 @@ import { AppContainer, CheckList } from "@components";
 export const OurMembershipSection = () => {
   return (
     <AppContainer id={MEMBERSHIP_ID} backgroundColor="#000000">
-      <Styles.Title>{MEMBERSHIP_SECTION}</Styles.Title>
+      <Styles.Title>{MEMBERSHIP_TITLE}</Styles.Title>
       <Styles.Subtitle>
         {MEMBERSHIP_SECTION_SUBTITLE_1}
         <br />

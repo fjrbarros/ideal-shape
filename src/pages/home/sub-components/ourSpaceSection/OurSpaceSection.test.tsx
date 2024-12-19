@@ -1,12 +1,12 @@
 import { screen } from "@testing-library/react";
 import { OurSpaceSection } from "./OurSpaceSection";
-import { OUR_SPACE_SECTION, ourSpaceItems } from "@constants";
+import { OUR_SPACE_TITLE, ourSpaceItems } from "@constants";
 import { customRender } from "@utils";
 
 describe("OurSpaceSection", () => {
   it("renders the title correctly", () => {
     customRender(<OurSpaceSection />);
-    const title = screen.getByText(OUR_SPACE_SECTION);
+    const title = screen.getByText(OUR_SPACE_TITLE);
     expect(title).toBeInTheDocument();
   });
 

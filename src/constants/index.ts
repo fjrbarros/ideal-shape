@@ -1,7 +1,7 @@
-export const HOME_SECTION = "Ideal Shape";
+export const HOME_TITLE = "Ideal Shape";
 export const HOME_ID = "home";
 
-export const OUR_SPACE_SECTION = "Nosso espaço";
+export const OUR_SPACE_TITLE = "Nosso espaço";
 export const OUR_SPACE_ID = "space";
 export const ourSpaceItems = [
   "Treinadores qualificados para orientação personalizada",
@@ -17,7 +17,7 @@ export const ourSpaceItems = [
   "Opções de planos de assinatura variados",
 ];
 
-export const MEMBERSHIP_SECTION = "Nossos planos";
+export const MEMBERSHIP_TITLE = "Nossos planos";
 export const MEMBERSHIP_ID = "membership";
 export const MEMBERSHIP_SECTION_SUBTITLE_1 =
   "Oferecemos uma variedade de planos de associação para atender às suas necessidades e orçamento.";
@@ -66,17 +66,17 @@ export const MEMBERSHIP_CARDS = [
   },
 ];
 
-export const TEAM_SECTION = "Nossa equipe";
+export const TEAM_TITLE = "Nossa equipe";
 export const TEAM_ID = "trainers";
 
-export const CONTACT_SECTION = "Contato";
+export const CONTACT_TITLE = "Contato";
 export const CONTACT_ID = "contact";
 
 export const menuItems = [
-  { title: OUR_SPACE_SECTION, id: OUR_SPACE_ID },
-  { title: MEMBERSHIP_SECTION, id: MEMBERSHIP_ID },
-  { title: TEAM_SECTION, id: TEAM_ID },
-  { title: CONTACT_SECTION, id: CONTACT_ID },
+  { title: OUR_SPACE_TITLE, id: OUR_SPACE_ID },
+  { title: MEMBERSHIP_TITLE, id: MEMBERSHIP_ID },
+  { title: TEAM_TITLE, id: TEAM_ID },
+  { title: CONTACT_TITLE, id: CONTACT_ID },
 ];
 
 export const trainers = [

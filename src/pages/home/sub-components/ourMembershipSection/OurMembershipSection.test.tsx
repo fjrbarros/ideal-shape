@@ -1,12 +1,12 @@
 import { screen } from "@testing-library/react";
 import { OurMembershipSection } from "./OurMembershipSection";
-import { MEMBERSHIP_CARDS, MEMBERSHIP_SECTION } from "@constants";
+import { MEMBERSHIP_CARDS, MEMBERSHIP_TITLE } from "@constants";
 import { customRender } from "@utils";
 
 describe("OurMembershipSection", () => {
   it("renders the section title", () => {
     customRender(<OurMembershipSection />);
-    expect(screen.getByText(MEMBERSHIP_SECTION)).toBeInTheDocument();
+    expect(screen.getByText(MEMBERSHIP_TITLE)).toBeInTheDocument();
   });
 
   it("renders the section subtitles", () => {
