@@ -60,7 +60,11 @@ export const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Styles.CarouselContainer>
       {showLeftArrow && (
-        <Styles.Arrow direction="left" onClick={prevSlide}>
+        <Styles.Arrow
+          data-testid="left-arrow"
+          $direction="left"
+          onClick={prevSlide}
+        >
           <FontAwesomeIcon icon={faArrowLeft} />
         </Styles.Arrow>
       )}
@@ -81,7 +85,11 @@ export const Carousel: React.FC<CarouselProps> = ({ items }) => {
         </Styles.CarouselContent>
       </Styles.CarouselWrapper>
       {showRightArrow && (
-        <Styles.Arrow direction="right" onClick={nextSlide}>
+        <Styles.Arrow
+          data-testid="right-arrow"
+          $direction="right"
+          onClick={nextSlide}
+        >
           <FontAwesomeIcon icon={faArrowRight} />
         </Styles.Arrow>
       )}
