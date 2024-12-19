@@ -8,6 +8,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { useMemo } from "react";
 
 interface ISocialLink {
   type: "facebook" | "twitter" | "instagram" | "linkedin";
@@ -52,7 +53,10 @@ const Card = ({ name, job, imageUrl, socialLinks }: ITranerCardProps) => (
           {socialLinks.map(({ type, iconUrl }) => (
             <Styles.CardIcon key={type}>
               <Styles.CardIconLink href={iconUrl} target="_blank">
-                <FontAwesomeIcon icon={getSocialIcon(type)} />
+                <FontAwesomeIcon
+                  data-testid={type}
+                  icon={getSocialIcon(type)}
+                />
               </Styles.CardIconLink>
             </Styles.CardIcon>
           ))}
@@ -62,17 +66,21 @@ const Card = ({ name, job, imageUrl, socialLinks }: ITranerCardProps) => (
   </Styles.CardWrapper>
 );
 
-const items = trainers.map((trainer) => (
-  <Card
-    key={trainer.name}
-    name={trainer.name}
-    job={trainer.job}
-    imageUrl={trainer.imageUrl}
-    socialLinks={trainer.socialLinks as ISocialLink[]}
-  />
-));
-
 export const OurTrainersSection = () => {
+  const items = useMemo(
+    () =>
+      trainers.map((trainer) => (
+        <Card
+          key={trainer.name}
+          name={trainer.name}
+          job={trainer.job}
+          imageUrl={trainer.imageUrl}
+          socialLinks={trainer.socialLinks as ISocialLink[]}
+        />
+      )),
+    []
+  );
+
   return (
     <AppContainer id={TEAM_ID} backgroundColor="#1e1e1e">
       <Styles.Title>{TEAM_SECTION}</Styles.Title>
