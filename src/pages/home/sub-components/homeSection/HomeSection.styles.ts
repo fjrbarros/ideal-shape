@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { AppContainer as AppContainerCP } from '@components';
+import styled, { css, keyframes } from "styled-components";
+import { AppContainer as AppContainerCP } from "@components";
 
 export const AppContainer = styled(AppContainerCP)`
   height: 100dvh;
@@ -18,9 +18,9 @@ export const AppContainer = styled(AppContainerCP)`
 export const Wrapper = styled.div`
   ${({ theme }) =>
     css`
-        @media (max-width: ${theme.breakpoints.tablet}px) {
-          max-width: 100%;
-        }
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        max-width: 100%;
+      }
     `}
 `;
 
@@ -45,7 +45,7 @@ export const Subtitle = styled.span`
         font-size: 1rem;
         max-width: 80%;
       }
-  `}
+    `}
 `;
 
 export const FlexContainer = styled.div`
@@ -57,7 +57,7 @@ export const FlexContainer = styled.div`
         flex-direction: column;
         gap: 0.7rem;
       }
-  `}
+    `}
 `;
 
 export const FlexItem = styled.div`
@@ -65,7 +65,6 @@ export const FlexItem = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
-  
 `;
 
 export const CountInfo = styled.span`
@@ -77,7 +76,7 @@ export const CountInfo = styled.span`
       @media (max-width: ${theme.breakpoints.tablet}px) {
         font-size: 1.4rem;
       }
-  `}
+    `}
 `;
 
 export const CountText = styled.span`
@@ -88,7 +87,7 @@ export const CountText = styled.span`
       @media (max-width: ${theme.breakpoints.tablet}px) {
         font-size: 0.8rem;
       }
-  `}
+    `}
 `;
 
 export const Divider = styled.div`
@@ -104,5 +103,62 @@ export const Divider = styled.div`
       @media (max-width: ${theme.breakpoints.mobile}px) {
         display: none;
       }
-  `}
+    `}
+`;
+
+export const HourWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  max-width: fit-content;
+  background-color: #00000057;
+  padding: 1rem;
+  border-radius: 10px;
+  ${({ theme }) =>
+    css`
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        padding: 0.6rem;
+      }
+    `}
+`;
+
+const textClip = keyframes`
+  to {
+    background-position: 200% center;
+  }
+`;
+
+export const HourTitle = styled.h2`
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right,rgb(204, 204, 204) 10%, #a75d00 40%, #ff4b00 80%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ${textClip} 1.5s linear infinite;
+  display: inline-block;
+`;
+
+export const HourText = styled.p`
+  font-size: 1.2rem;
+  & span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff4b00;
+  }
+
+  ${({ theme }) =>
+    css`
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        font-size: 1rem;
+        & span {
+          font-size: 1rem;
+        }
+      }
+    `}
 `;
