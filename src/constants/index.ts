@@ -1,6 +1,17 @@
 export const HOME_TITLE = "Ideal Shape";
 export const HOME_ID = "home";
 
+export const ABOUT_US_ID = "about-us";
+export const ABOUT_US_TITLE = "Sobre nós";
+export const about_us_description =
+  "Bem-vindo à <strong>Ideal Shape!</strong> Somos mais do que uma academia; somos um espaço dedicado ao seu bem-estar, saúde e qualidade de vida. Localizados no Centro de Içara - SC, estamos comprometidos em oferecer um ambiente acolhedor, com infraestrutura moderna e profissionais qualificados para atender às suas necessidades. Desde a nossa fundação, há 8 anos atrás, buscamos inspirar nossos alunos a superarem seus limites e alcançarem seus objetivos, sejam eles relacionados à saúde, condicionamento físico ou estilo de vida. Nosso time de profissionais é formado por especialistas em educação física e áreas correlatas, prontos para orientar você em cada etapa da sua jornada.";
+export const about_us_mission = "Nossa missão";
+export const about_us_mission_description =
+  "Promover saúde, qualidade de vida e bem-estar através de atividades físicas orientadas, em um ambiente seguro e motivador.";
+export const about_us_vision = "Nossa visão";
+export const about_us_vision_description =
+  "Ser referência em serviços de saúde e fitness, reconhecida pela excelência no atendimento e pelos resultados alcançados pelos nossos alunos.";
+
 export const OUR_SPACE_TITLE = "Nosso espaço";
 export const OUR_SPACE_SUBTITLE =
   "O lugar perfeito para alcançar seus objetivos";
@@ -76,6 +87,7 @@ export const CONTACT_TITLE = "Contato";
 export const CONTACT_ID = "contact";
 
 export const menuItems = [
+  { title: ABOUT_US_TITLE, id: ABOUT_US_ID },
   { title: OUR_SPACE_TITLE, id: OUR_SPACE_ID },
   { title: MEMBERSHIP_TITLE, id: MEMBERSHIP_ID },
   { title: TEAM_TITLE, id: TEAM_ID },
