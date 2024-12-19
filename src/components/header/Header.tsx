@@ -1,24 +1,21 @@
-import { AppContainer, MenuButton } from "@components";
-import * as Styles from "./Header.styles";
-import { type MouseEvent, useEffect, useState } from "react";
-import { useScrollPosition } from "@utils";
-import { HOME_ID, HOME_TITLE, menuItems } from "@constants";
+import { AppContainer, MenuButton } from '@components';
+import * as Styles from './Header.styles';
+import { type MouseEvent, useEffect, useState } from 'react';
+import { useScrollPosition } from '@utils';
+import { HOME_ID, HOME_TITLE, menuItems } from '@constants';
 
 export const Header = () => {
   const { hasScrollMoved } = useScrollPosition();
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [ideal, shape] = HOME_TITLE.split(" ");
+  const [ideal, shape] = HOME_TITLE.split(' ');
 
-  const handleMenuClick = (
-    event: MouseEvent<HTMLAnchorElement>,
-    targetId: string
-  ) => {
+  const handleMenuClick = (event: MouseEvent<HTMLAnchorElement>, targetId: string) => {
     event.preventDefault();
     const element = document.getElementById(targetId);
     const moveScroll = () => {
-      const block = window.innerWidth < 768 ? "start" : "center";
+      const block = window.innerWidth < 768 ? 'start' : 'center';
       element?.scrollIntoView({
-        behavior: "smooth",
+        behavior: 'smooth',
         block,
       });
     };
@@ -39,10 +36,10 @@ export const Header = () => {
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isMenuActive]);
 
@@ -54,11 +51,7 @@ export const Header = () => {
         </Styles.Logo>
         <Styles.Nav $isMenuActive={isMenuActive}>
           {menuItems.map(({ title, id }) => (
-            <Styles.NavLink
-              key={id}
-              href={`#${id}`}
-              onClick={(e) => handleMenuClick(e, id)}
-            >
+            <Styles.NavLink key={id} href={`#${id}`} onClick={(e) => handleMenuClick(e, id)}>
               {title}
             </Styles.NavLink>
           ))}

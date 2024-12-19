@@ -1,6 +1,6 @@
-import * as Styles from "./CheckList.styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import * as Styles from './CheckList.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 interface ICheckListProps {
   text: string;

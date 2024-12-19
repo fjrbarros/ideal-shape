@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ScrollToTopButton = styled.button`
     position: fixed;

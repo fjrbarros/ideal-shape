@@ -1,2 +1,2 @@
-export * from "./customRender/customRender";
-export * from "./useScrollPosition/useScrollPosition";
+export * from './customRender/customRender';
+export * from './useScrollPosition/useScrollPosition';

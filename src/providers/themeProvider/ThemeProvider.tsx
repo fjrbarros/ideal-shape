@@ -1,6 +1,6 @@
-import type { PropsWithChildren } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { GlobalStyles } from "./GlobalStyle";
+import type { PropsWithChildren } from 'react';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { GlobalStyles } from './GlobalStyle';
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const breakpoints = {

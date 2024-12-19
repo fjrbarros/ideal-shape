@@ -1,5 +1,5 @@
-import { HOME_ID } from "@constants";
-import * as Styles from "./HomeSection.styles";
+import { HOME_ID } from '@constants';
+import * as Styles from './HomeSection.styles';
 
 export const HomeSection = () => {
   return (
@@ -8,9 +8,8 @@ export const HomeSection = () => {
         <Styles.Title1>PRONTO PARA TREINAR</Styles.Title1>
         <Styles.Title2>SEU CORPO</Styles.Title2>
         <Styles.Subtitle>
-          O treinamento na academia é uma abordagem estrutural e disciplinada ao
-          exercício físico que se concentra na força, na resistência e na
-          melhoria geral do condicionamento físico.
+          O treinamento na academia é uma abordagem estrutural e disciplinada ao exercício físico
+          que se concentra na força, na resistência e na melhoria geral do condicionamento físico.
         </Styles.Subtitle>
 
         <Styles.FlexContainer>

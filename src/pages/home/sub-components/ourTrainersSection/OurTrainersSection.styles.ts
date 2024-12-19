@@ -1,10 +1,17 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Title = styled.h3`
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+export const Subtitle = styled.h3`
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.2rem;
 `;
 
 export const CardImg = styled.div<{ $imageUrl: string }>`
@@ -45,7 +52,7 @@ export const CardIcon = styled.li`
   ${({ theme }) =>
     css`
       @media (max-width: ${theme.breakpoints.tablet}px) {
-       transform: translateY(0) !important;
+        transform: translateY(0) !important;
       }
     `}
 `;
@@ -88,17 +95,17 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #2b2b2b;
   width: 100%;
   height: 400px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
     transform: scale(1.05);
   }
 

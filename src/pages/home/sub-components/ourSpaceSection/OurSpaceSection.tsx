@@ -1,14 +1,9 @@
-import * as Styles from "./OurSpaceSection.styles";
-import IdeadSpace1 from "../../../../assets/ideal-space-1.jpg";
-import IdeadSpace2 from "../../../../assets/ideal-space-2.jpg";
-import IdeadSpace3 from "../../../../assets/ideal-space-3.jpg";
-import {
-  OUR_SPACE_ID,
-  OUR_SPACE_SUBTITLE,
-  OUR_SPACE_TITLE,
-  ourSpaceItems,
-} from "@constants";
-import { AppContainer, CheckList } from "@components";
+import * as Styles from './OurSpaceSection.styles';
+import IdeadSpace1 from '../../../../assets/ideal-space-1.jpg';
+import IdeadSpace2 from '../../../../assets/ideal-space-2.jpg';
+import IdeadSpace3 from '../../../../assets/ideal-space-3.jpg';
+import { OUR_SPACE_ID, OUR_SPACE_SUBTITLE, OUR_SPACE_TITLE, ourSpaceItems } from '@constants';
+import { AppContainer, CheckList } from '@components';
 
 export const OurSpaceSection = () => {
   return (

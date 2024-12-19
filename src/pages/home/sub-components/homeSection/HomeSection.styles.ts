@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { AppContainer as AppContainerCP } from "@components";
+import styled, { css } from 'styled-components';
+import { AppContainer as AppContainerCP } from '@components';
 
 export const AppContainer = styled(AppContainerCP)`
   height: 100dvh;

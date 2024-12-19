@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface IButtonStyleProps {
   $line1?: boolean;
@@ -31,21 +31,21 @@ export const Line = styled.path<IButtonStyleProps>`
   ${({ $isActive, $line1 }) =>
     $line1 &&
     css`
-      stroke-dasharray: ${$isActive ? "90 207" : "60 207"};
-      stroke-dashoffset: ${$isActive ? "-134" : "0"};
+      stroke-dasharray: ${$isActive ? '90 207' : '60 207'};
+      stroke-dashoffset: ${$isActive ? '-134' : '0'};
     `}
 
   ${({ $line2, $isActive }) =>
     $line2 &&
     css`
-      stroke-dasharray: ${$isActive ? "1 60" : "60 60"};
-      stroke-dashoffset: ${$isActive ? "-30" : "0"};
+      stroke-dasharray: ${$isActive ? '1 60' : '60 60'};
+      stroke-dashoffset: ${$isActive ? '-30' : '0'};
     `}
 
   ${({ $line3, $isActive }) =>
     $line3 &&
     css`
-      stroke-dasharray: ${$isActive ? "90 207" : "60 207"};
-      stroke-dashoffset: ${$isActive ? "-134" : "0"};
+      stroke-dasharray: ${$isActive ? '90 207' : '60 207'};
+      stroke-dashoffset: ${$isActive ? '-134' : '0'};
     `}
 `;

@@ -1,31 +1,31 @@
-import { screen } from "@testing-library/react";
-import { OurSpaceSection } from "./OurSpaceSection";
-import { OUR_SPACE_SUBTITLE, OUR_SPACE_TITLE, ourSpaceItems } from "@constants";
-import { customRender } from "@utils";
+import { screen } from '@testing-library/react';
+import { OurSpaceSection } from './OurSpaceSection';
+import { OUR_SPACE_SUBTITLE, OUR_SPACE_TITLE, ourSpaceItems } from '@constants';
+import { customRender } from '@utils';
 
-describe("OurSpaceSection", () => {
-  it("renders the title and subtitle correctly", () => {
+describe('OurSpaceSection', () => {
+  it('renders the title and subtitle correctly', () => {
     customRender(<OurSpaceSection />);
     expect(screen.getByText(OUR_SPACE_TITLE)).toBeInTheDocument();
     expect(screen.getByText(OUR_SPACE_SUBTITLE)).toBeInTheDocument();
   });
 
-  it("renders all images with correct alt text", () => {
+  it('renders all images with correct alt text', () => {
     customRender(<OurSpaceSection />);
     const images = [
-      { alt: "space1", src: "../../../../assets/ideal-space-3.jpg" },
-      { alt: "space2", src: "../../../../assets/ideal-space-2.jpg" },
-      { alt: "space3", src: "../../../../assets/ideal-space-1.jpg" },
+      { alt: 'space1', src: '../../../../assets/ideal-space-3.jpg' },
+      { alt: 'space2', src: '../../../../assets/ideal-space-2.jpg' },
+      { alt: 'space3', src: '../../../../assets/ideal-space-1.jpg' },
     ];
 
     for (const image of images) {
       const imgElement = screen.getByAltText(image.alt);
       expect(imgElement).toBeInTheDocument();
-      expect(imgElement).toHaveAttribute("src", "test-file-stub");
+      expect(imgElement).toHaveAttribute('src', 'test-file-stub');
     }
   });
 
-  it("renders all checklist items", () => {
+  it('renders all checklist items', () => {
     customRender(<OurSpaceSection />);
     for (const item of ourSpaceItems) {
       const checklistItem = screen.getByText(item);

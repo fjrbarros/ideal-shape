@@ -1,1 +1,1 @@
-export * from "./themeProvider/ThemeProvider";
+export * from './themeProvider/ThemeProvider';

@@ -1,4 +1,4 @@
-import * as Styles from "./MenuButton.styles";
+import * as Styles from './MenuButton.styles';
 
 interface IMenuButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   isActive?: boolean;

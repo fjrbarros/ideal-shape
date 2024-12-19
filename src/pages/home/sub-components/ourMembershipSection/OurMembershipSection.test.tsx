@@ -1,24 +1,24 @@
-import { screen } from "@testing-library/react";
-import { OurMembershipSection } from "./OurMembershipSection";
-import { MEMBERSHIP_CARDS, MEMBERSHIP_TITLE } from "@constants";
-import { customRender } from "@utils";
+import { screen } from '@testing-library/react';
+import { OurMembershipSection } from './OurMembershipSection';
+import { MEMBERSHIP_CARDS, MEMBERSHIP_TITLE } from '@constants';
+import { customRender } from '@utils';
 
-describe("OurMembershipSection", () => {
-  it("renders the section title", () => {
+describe('OurMembershipSection', () => {
+  it('renders the section title', () => {
     customRender(<OurMembershipSection />);
     expect(screen.getByText(MEMBERSHIP_TITLE)).toBeInTheDocument();
   });
 
-  it("renders the section subtitles", () => {
+  it('renders the section subtitles', () => {
     customRender(<OurMembershipSection />);
     expect(
       screen.getByText(
-        /oferecemos uma variedade de planos de associação para atender às suas necessidades e orçamento\.escolha o plano que melhor se adapta a você e aproveite\./i
-      )
+        /oferecemos uma variedade de planos de associação para atender às suas necessidades e orçamento\.escolha o plano que melhor se adapta a você e aproveite\./i,
+      ),
     ).toBeInTheDocument();
   });
 
-  it("renders all membership cards", () => {
+  it('renders all membership cards', () => {
     customRender(<OurMembershipSection />);
     for (const card of MEMBERSHIP_CARDS) {
       expect(screen.getAllByText(card.title)[0]).toBeInTheDocument();

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const CarouselContent = styled.div`
 `;
 
 interface ArrowProps {
-  $direction: "left" | "right";
+  $direction: 'left' | 'right';
 }
 
 export const Arrow = styled.div<ArrowProps>`
@@ -33,7 +33,7 @@ export const Arrow = styled.div<ArrowProps>`
   background-color: #2d2d2d;
   border-radius: 50%;
   z-index: 1;
-  ${({ $direction }) => ($direction === "left" ? "left: 15px;" : "right: 15px;")}
+  ${({ $direction }) => ($direction === 'left' ? 'left: 15px;' : 'right: 15px;')}
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;

@@ -1,9 +1,7 @@
-import type { PropsWithChildren } from "react";
-import * as Styles from "./AppContainer.styles";
+import type { PropsWithChildren } from 'react';
+import * as Styles from './AppContainer.styles';
 
-interface IAppContainerProps
-  extends PropsWithChildren,
-    React.HTMLAttributes<HTMLDivElement> {
+interface IAppContainerProps extends PropsWithChildren, React.HTMLAttributes<HTMLDivElement> {
   backgroundColor?: string;
   color?: string;
 }
@@ -11,7 +9,7 @@ interface IAppContainerProps
 export const AppContainer = ({
   children,
   backgroundColor,
-  color = "#ffffff",
+  color = '#ffffff',
   ...rest
 }: IAppContainerProps) => (
   <Styles.Container style={{ backgroundColor, color }} {...rest}>
