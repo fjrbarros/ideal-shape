@@ -1,16 +1,38 @@
-import { screen } from '@testing-library/react';
-import { HomePage } from './Home';
-import { customRender } from '@utils';
+import { screen } from "@testing-library/react";
+import { HomePage } from "./Home";
+import { customRender } from "@utils";
 
-describe('HomePage', () => {
-  it('renders HomePage component correctly', () => {
-    const { container } = customRender(<HomePage />);
-    expect(container.firstChild).toBeInTheDocument();
-  });
-
-  it('renders Header component within HomePage', () => {
+describe("HomePage", () => {
+  it("renders Header component within HomePage", () => {
     customRender(<HomePage />);
-    expect(screen.getByText(/ideal/i)).toBeInTheDocument();
-    expect(screen.getByText(/shape/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", {
+        name: /ideal shape/i,
+      })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", {
+        name: /sobre nós/i,
+      })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", {
+        name: /nosso espaço/i,
+      })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", {
+        name: /nossos planos/i,
+      })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("heading", {
+        name: /nossa equipe/i,
+      })
+    ).toBeInTheDocument();
   });
 });
