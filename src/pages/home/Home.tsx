@@ -2,6 +2,7 @@ import { Header, ScrollToTopButton } from "@components";
 import {
   AboutUsSection,
   HomeSection,
+  OurProductsSection,
   OurSpaceSection,
   OurTeamSection,
 } from "./sub-components";
@@ -16,6 +17,7 @@ export const HomePage = () => {
       <OurSpaceSection />
       <OurMembershipSection />
       <OurTeamSection />
+      <OurProductsSection />
       <ScrollToTopButton />
     </>
   );
