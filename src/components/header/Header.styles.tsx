@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface IHeaderStyleProps {
   $isMenuActive?: boolean;
@@ -6,10 +6,8 @@ interface IHeaderStyleProps {
 }
 
 export const Header = styled.header<IHeaderStyleProps>`
-  backdrop-filter: ${({ $hasScrollMoved }) =>
-    $hasScrollMoved ? "blur(8px)" : "blur(2px)"};
-  border-bottom: ${({ $hasScrollMoved }) =>
-    $hasScrollMoved ? "none" : "1px solid #2f2f2f"};
+  backdrop-filter: ${({ $hasScrollMoved }) => ($hasScrollMoved ? 'blur(8px)' : 'blur(2px)')};
+  border-bottom: ${({ $hasScrollMoved }) => ($hasScrollMoved ? 'none' : '1px solid #2f2f2f')};
   color: #ffffff;
   width: 100%;
   position: fixed;
@@ -17,8 +15,7 @@ export const Header = styled.header<IHeaderStyleProps>`
   left: 0;
   z-index: 1;
   transition: box-shadow 0.3s, backdrop-filter 0.3s;
-  box-shadow: ${({ $hasScrollMoved }) =>
-    $hasScrollMoved ? "0 0px 9px #ff380096;" : "none"};
+  box-shadow: ${({ $hasScrollMoved }) => ($hasScrollMoved ? '0 0px 9px #ff380096;' : 'none')};
 
   & > .app-container {
     display: flex;
@@ -72,7 +69,7 @@ export const Nav = styled.nav<IHeaderStyleProps>`
       @media (max-width: ${theme.breakpoints.tablet}px) {
         position: fixed;
         top: 0;
-        left: ${({ $isMenuActive }) => ($isMenuActive ? "0" : "100%")};
+        left: ${({ $isMenuActive }) => ($isMenuActive ? '0' : '100%')};
         height: 100dvh;
         width: 100%;
         padding: 100px 50px;

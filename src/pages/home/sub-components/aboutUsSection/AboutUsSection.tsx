@@ -1,5 +1,5 @@
-import { AppContainer } from "@components";
-import * as Styles from "./AboutUsSection.styles";
+import { AppContainer } from '@components';
+import * as Styles from './AboutUsSection.styles';
 import {
   about_us_description,
   ABOUT_US_ID,
@@ -8,14 +8,12 @@ import {
   ABOUT_US_TITLE,
   about_us_vision,
   about_us_vision_description,
-} from "@constants";
+} from '@constants';
 
 export const AboutUsSection = () => (
   <AppContainer id={ABOUT_US_ID} backgroundColor="#101010">
     <Styles.Title>{ABOUT_US_TITLE}</Styles.Title>
-    <Styles.Description
-      dangerouslySetInnerHTML={{ __html: about_us_description }}
-    />
+    <Styles.Description dangerouslySetInnerHTML={{ __html: about_us_description }} />
 
     <Styles.Title>{about_us_mission}</Styles.Title>
     <Styles.Description>{about_us_mission_description}</Styles.Description>

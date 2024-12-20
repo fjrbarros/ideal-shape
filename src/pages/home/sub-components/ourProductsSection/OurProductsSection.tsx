@@ -1,13 +1,8 @@
-import { AppContainer } from "@components";
-import * as Styles from "./OurProductsSection.styles";
-import {
-  products,
-  PRODUCTS_ID,
-  PRODUCTS_SUBTITLE,
-  PRODUCTS_TITLE,
-} from "@constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrazilianRealSign } from "@fortawesome/free-solid-svg-icons";
+import { AppContainer } from '@components';
+import * as Styles from './OurProductsSection.styles';
+import { products, PRODUCTS_ID, PRODUCTS_SUBTITLE, PRODUCTS_TITLE } from '@constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBrazilianRealSign } from '@fortawesome/free-solid-svg-icons';
 
 interface IProductProps {
   id: number;
@@ -18,13 +13,7 @@ interface IProductProps {
   imageUrl: string;
 }
 
-const ProductCard = ({
-  title,
-  description,
-  price,
-  discountPrice,
-  imageUrl,
-}: IProductProps) => {
+const ProductCard = ({ title, description, price, discountPrice, imageUrl }: IProductProps) => {
   return (
     <Styles.Card>
       <Styles.CardImage>
