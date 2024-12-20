@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Title = styled.h3`
   font-size: 2rem;
@@ -65,12 +65,16 @@ export const CardIcons = styled.ul`
 
   ${CardIcon} {
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 7px;
     color: #fff;
     transition: transform 0.2s ease-in-out;
     transform: translateY(100px);
 
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+    
     &:nth-child(2) {
       transition-delay: 0.2s;
     }
@@ -127,8 +131,7 @@ export const CardTrainerName = styled.span`
 `;
 
 export const CardTrainerFuncion = styled.h3`
-  margin-top: 5px;
-  margin: 8px 0;
+  margin: 8px 0 4px;
 `;
 
 export const CardTrainerDescription = styled.span`
