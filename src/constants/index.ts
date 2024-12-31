@@ -1,3 +1,6 @@
+import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 export const HOME_TITLE = 'Ideal Shape';
 export const HOME_ID = 'home';
 
@@ -146,9 +149,33 @@ export const products = [
   },
 ];
 
-export const CONTACT_TITLE = 'Contato';
 export const CONTACT_ID = 'contact';
-
+export const CONTACT_TITLE = 'Contato';
+export const CONTACT_INFO = 'Informações';
+export const CONTACT_FORM_TITLE = 'Fale com a gente pelo Whatsapp';
+export const CONTACT_PHONE = '5548992007613';
+export const contactInfo = [
+  {
+    icon: faLocationDot,
+    title: 'Endereço',
+    description: 'Rua Coronel Marcos Rovaris, 276 - Centro, <br />Içara, Santa Catarina, 55060',
+  },
+  {
+    icon: faPhone,
+    title: 'Telefone',
+    description: '(48) 9 9977-1839',
+  },
+  {
+    icon: faInstagram,
+    title: 'Instagram',
+    description: '@idealshapeacademia',
+  },
+  {
+    icon: faEnvelope,
+    title: 'E-mail',
+    description: '',
+  },
+];
 export const menuItems = [
   { title: ABOUT_US_TITLE, id: ABOUT_US_ID },
   { title: OUR_SPACE_TITLE, id: OUR_SPACE_ID },

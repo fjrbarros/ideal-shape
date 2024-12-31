@@ -1,12 +1,13 @@
-import { Header, ScrollToTopButton } from '@components';
+import { Header, ScrollToTopButton } from "@components";
 import {
   AboutUsSection,
+  ContactSection,
   HomeSection,
   OurProductsSection,
   OurSpaceSection,
   OurTeamSection,
-} from './sub-components';
-import { OurMembershipSection } from './sub-components/ourMembershipSection/OurMembershipSection';
+} from "./sub-components";
+import { OurMembershipSection } from "./sub-components/ourMembershipSection/OurMembershipSection";
 
 export const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ export const HomePage = () => {
       <OurMembershipSection />
       <OurTeamSection />
       <OurProductsSection />
+      <ContactSection />
       <ScrollToTopButton />
     </>
   );

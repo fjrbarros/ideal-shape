@@ -3,3 +3,4 @@ export * from './ourSpaceSection/OurSpaceSection';
 export * from './ourTeamSection/OurTeamSection';
 export * from './aboutUsSection/AboutUsSection';
 export * from './ourProductsSection/OurProductsSection';
+export * from './contactSection/ContactSection';

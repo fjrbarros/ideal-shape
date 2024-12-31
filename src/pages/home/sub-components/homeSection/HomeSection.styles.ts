@@ -119,6 +119,7 @@ export const HourWrapper = styled.div`
     css`
       @media (max-width: ${theme.breakpoints.tablet}px) {
         padding: 0.6rem;
+        background-color: transparent;
       }
     `}
 `;
