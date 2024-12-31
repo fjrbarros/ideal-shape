@@ -100,8 +100,8 @@ export const products = [
     title: 'BCAA 2:1:1',
     description:
       'O suplemento BCAA, constituído pelos aminoácidos Leucina, Valina e Isoleucina, podem te ajudar a conquistar resultados ainda maiores através de uma rotina de treino e dieta adequados.',
-    price: 99.99,
-    discountPrice: 129.99,
+    price: 59.99,
+    discountPrice: 89.99,
     imageUrl:
       'https://www.bodybuilders.com.br/cdn/shop/articles/IMAGEM_TESTE_BLOG_3.jpg?v=1729174918',
   },
@@ -110,8 +110,8 @@ export const products = [
     title: 'Creatina Monohidratada',
     description:
       'A creatina suplemento garante uma quantidade excelente desse nutriente no seu dia a dia.',
-    price: 99.99,
-    discountPrice: 129.99,
+    price: 79.99,
+    discountPrice: 100.0,
     imageUrl:
       'https://iclnoticias.com.br/wp-content/uploads/2024/05/2000471303-creatina-960x540.webp',
   },
@@ -120,10 +120,29 @@ export const products = [
     title: 'L-Glutamina (250g)',
     description:
       'A glutamina é classificada como aminoácido não essencial, devido a capacidade de produção por nosso organismo, ela pode ser sintetizada por pulmões, fígado, cérebro, músculos esqueléticos e tecido adiposo.',
-    price: 99.99,
-    discountPrice: 129.99,
+    price: 139.99,
+    discountPrice: 159.99,
     imageUrl:
       'https://duxnutrition.vtexassets.com/arquivos/ids/166660/mouse-hover-0013-glutamina-X.png?v=638584763345570000',
+  },
+  {
+    id: 5,
+    title: 'Conjunto de Compressão Esportiva',
+    description:
+      'Estilo Namorado para Homens, Camiseta de Manga Curta Fitness de Secagem Rápida + Shorts',
+    price: 80.9,
+    discountPrice: 100.9,
+    imageUrl:
+      'https://i5.walmartimages.com/asr/abb90c72-3154-402f-8364-beb55de53fce.66ef385d1254602d97b6114ceb0fecb0.jpeg',
+  },
+  {
+    id: 6,
+    title: '5 pçs/set treino de compressão dos homens',
+    description:
+      'terno esportivo ginásio roupas de fitness correndo jogging esporte wear treino collants',
+    price: 98.9,
+    discountPrice: 110.9,
+    imageUrl: 'https://ae01.alicdn.com/kf/H84919d04e5d74a2a86f1e7705e03319dT.png',
   },
 ];
 

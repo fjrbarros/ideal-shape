@@ -1,8 +1,13 @@
-import { AppContainer } from '@components';
-import * as Styles from './OurProductsSection.styles';
-import { products, PRODUCTS_ID, PRODUCTS_SUBTITLE, PRODUCTS_TITLE } from '@constants';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBrazilianRealSign } from '@fortawesome/free-solid-svg-icons';
+import { AppContainer } from "@components";
+import * as Styles from "./OurProductsSection.styles";
+import {
+  products,
+  PRODUCTS_ID,
+  PRODUCTS_SUBTITLE,
+  PRODUCTS_TITLE,
+} from "@constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBrazilianRealSign } from "@fortawesome/free-solid-svg-icons";
 
 interface IProductProps {
   id: number;
@@ -13,7 +18,13 @@ interface IProductProps {
   imageUrl: string;
 }
 
-const ProductCard = ({ title, description, price, discountPrice, imageUrl }: IProductProps) => {
+const ProductCard = ({
+  title,
+  description,
+  price,
+  discountPrice,
+  imageUrl,
+}: IProductProps) => {
   return (
     <Styles.Card>
       <Styles.CardImage>
@@ -45,7 +56,7 @@ export const OurProductsSection = () => {
     <AppContainer id={PRODUCTS_ID} backgroundColor="#000000">
       <Styles.Title>{PRODUCTS_TITLE}</Styles.Title>
       <Styles.Subtitle>{PRODUCTS_SUBTITLE}</Styles.Subtitle>
-      <Styles.CardGrid>
+      <Styles.CardGrid data-testid="product-cards">
         {products.map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
